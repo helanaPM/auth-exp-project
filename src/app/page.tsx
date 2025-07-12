@@ -6,8 +6,8 @@ export default function Home() {
     <main className="min-h-screen bg-white text-gray-900 px-6 py-10">
       {/* Hero Section */}
       <section className="text-center mb-12">
-        <h1 className="text-4xl font-bold mb-4">KALLORA</h1>
-        <p className="text-lg text-gray-600 max-w-xl mx-auto">
+        <h1 className="text-4xl font-heading mb-4">KALLORA</h1>
+        <p className="text-lg font-body text-gray-600 max-w-xl mx-auto">
           Real people offering Real experiences.
         </p>
       </section>

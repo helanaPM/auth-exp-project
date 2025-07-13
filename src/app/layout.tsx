@@ -10,7 +10,7 @@ const inter = Inter({
 import localFont from 'next/font/local';
 
 const clashDisplay = localFont({
-  src: '../../public/fonts/clash-display/ClashDisplay-Bold.woff2',
+  src: '../../public/fonts/clash-display/ClashDisplay-Semibold.woff2',
   variable: '--font-clash',
 });
 

@@ -27,5 +27,33 @@ export const mockExperiences: Experience[] = [
     imageUrl: 'https://picsum.photos/id/454/600/400',
     price: 100,
     date: '2025-08-18',
+  },
+  // Add more mock experiences as needed
+  {
+    id: '4',
+    title: 'Traditional Keralan Cooking Class',
+    description: 'Join a local chef to learn the secrets of authentic Keralan cuisine.',
+    location: 'Kerala, India',
+    imageUrl: 'https://picsum.photos/id/175/600/400',
+    price: 50,
+    date: '2025-09-01',
+  },
+  {    
+    id: '5',
+    title: 'Yoga Retreat in the Himalayas',
+    description: 'Experience tranquility and rejuvenation with daily yoga sessions in the serene Himalayas.',
+    location: 'Himalayas, India',
+    imageUrl: 'https://picsum.photos/id/678/600/400',
+    price: 200,
+    date: '2025-09-10',
+  },
+  {
+    id: '6',
+    title: 'Explore the Backwaters of Kerala',
+    description: 'A guided boat tour through the picturesque backwaters, with opportunities for bird watching.',
+    location: 'Kerala, India',
+    imageUrl: 'https://picsum.photos/id/987/600/400',
+    price: 70,
+    date: '2025-09-15',
   }
 ];

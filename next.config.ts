@@ -1,5 +1,6 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
 
+/** @type {import('next').NextConfig} */
 const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
@@ -8,6 +9,14 @@ const nextConfig: NextConfig = {
         hostname: 'picsum.photos',
       },
     ],
+  },
+  webpack(config) {
+    config.module.rules.push({
+      test: /\.svg$/,
+      issuer: /\.[jt]sx?$/, // Only apply to TS/JS files
+      use: ['@svgr/webpack'],
+    });
+    return config;
   },
 };
 

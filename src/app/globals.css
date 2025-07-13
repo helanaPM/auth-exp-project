@@ -1,15 +1,22 @@
 @import "tailwindcss";
+@import "../styles/clash-display.css";
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  --font-heading: 'ClashDisplay-Semibold', serif;
+  --font-body: 'Inter', sans-serif;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-body);
+  --font-heading: var(--font-heading);
+  --color-primary: #C29B53;   /* deep gold */
+  --color-highlight: #087E8B; /* peacock feather */
+  --color-accent: #1E3A47;    /* deep teal background */
+  --color-bg: #F1ECE7;        /* pale cream */
+  --color-text: #2C2C2C;      /* charcoal */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,5 +29,33 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
 }
+
+@layer utilities {
+  .font-heading {
+    font-family: var(--font-heading);
+  }
+  .font-body {
+    font-family: var(--font-body);
+  }
+  .btn-primary {
+    @apply bg-primary hover:bg-highlight text-white px-4 py-2 rounded-md;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.experience-card {
+  animation: slideInRight 0.6s ease-out forwards;
+}
+

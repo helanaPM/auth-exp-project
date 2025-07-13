@@ -43,3 +43,19 @@ body {
     @apply bg-primary hover:bg-highlight text-white px-4 py-2 rounded-md;
   }
 }
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.experience-card {
+  animation: slideInRight 0.6s ease-out forwards;
+}
+

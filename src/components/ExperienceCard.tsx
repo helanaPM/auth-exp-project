@@ -1,29 +1,48 @@
-// This component can be used in the Experience Grid section of the Home page
-// to display individual experiences with their details.
+// components/ExperienceCard.tsx
 'use client';
 
-import Image from 'next/image';
 import { Experience } from '@/types/experience';
+import Image from 'next/image';
 
-type Props = {
+interface Props {
   experience: Experience;
-};
+  index?: number; // for staggered animation
+}
 
-export const ExperienceCard: React.FC<Props> = ({ experience }) => {
+export const ExperienceCard = ({ experience, index = 0 }: Props) => {
   return (
-    <div className="rounded-2xl shadow-md border overflow-hidden hover:shadow-xl transition duration-300">
-      <Image
-        src={experience.imageUrl}
-        alt={experience.title}
-        width={500}
-        height={300}
-        className="w-full h-64 object-cover"
-      />
-      <div className="p-4">
-        <h3 className="text-lg font-semibold">{experience.title}</h3>
-        <p className="text-gray-600 text-sm">{experience.location}</p>
-        <p className="text-sm mt-1 text-gray-700 line-clamp-2">{experience.description}</p>
-        <p className="mt-3 font-bold text-indigo-600">€{experience.price}</p>
+    <div
+      className={`experience-card opacity-0 animate-slideInRight`}
+      style={{ animationDelay: `${index * 0.1}s` }}
+    >
+      <div className="bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 flex p-4 gap-4">
+        {/* Image */}
+        <Image
+          src={experience.imageUrl}
+          alt={experience.title}
+          className="w-full h-full object-cover"
+          width={96}
+          height={96}
+          style={{ objectFit: 'cover' }}
+        />
+
+        {/* Content */}
+        <div className="flex flex-col justify-between flex-grow min-w-0">
+          <div>
+            <h3 className="text-sm font-heading text-primary mb-1 truncate">
+              {experience.title}
+            </h3>
+            <p className="text-xs text-charcoal mb-1 truncate">
+              {experience.location}
+            </p>
+            <p className="text-xs text-gray-500 line-clamp-2">
+              {experience.description}
+            </p>
+          </div>
+          <div className="text-xs font-semibold text-highlight mt-2">
+            €{experience.price}
+          </div>
+        </div>
       </div>
     </div>
   );

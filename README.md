@@ -1,36 +1,125 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+---
+# 🌿 Kallora
 
-First, run the development server:
+Kallora is a digital platform where users can **discover and book authentic, cultural, soul-rooted experiences** — from learning to churn butter from scratch, to joining a folk painting workshop, cooking with a local family, or celebrating with traditional music and dance.  
+It’s about slowing down, reconnecting with culture, and finding beauty in the everyday.
+
+---
+
+## ✨ Features (that I would like to have)
+
+- 🏡 Homepage discovery flow (search + category explorer)
+- 📍 Explore by category/destination
+- 📦 Experience detail pages (host info, description, reviews)
+- 🎟 Bookings & inquiries (basic CRUD operations)
+- 👥 User accounts with login/logout
+- 🧑‍🌾 Host dashboard to add/manage experiences
+- 🌍 Event API integration (e.g., Ticketmaster / Eventbrite / SeatGeek) (still trying to figure out if this is necessary)
+- 📰 Newsletter signup
+- ⭐ Testimonials & reviews
+- 📊 Impact stats + brand story section
+
+---
+
+## 🛠 Tech Stack
+
+- **Next.js 14** (App Router)
+- **Tailwind CSS v4**
+- **Prisma + PostgreSQL** (Neon or Supabase)
+- **Auth.js (NextAuth)**
+- **Vercel** (hosting & deployment)
+- **Figma** for design & prototyping
+
+---
+
+## 📐 Design Prototype
+
+👉 [View the Figma Prototype](https://www.figma.com/proto/s9Yu3Yich7zRX8WFhNXpfq/Kallora.com?node-id=0-1&t=gaWDLzNdKmGDoX6b-1)
+
+---
+
+## 📋 Project Management
+
+We track tasks and sprints in Notion:  
+👉 [View the Kallora Project Board](https://www.notion.so/256212a1b84180b0bf96e2f73db88ffe?v=256212a1b84180b782f3000c20d82f8e)
+
+---
+
+## 🚀 Dev Quickstart
 
 ```bash
+# 1) Clone
+git clone https://github.com/helanaPM/auth-exp-project.git
+cd auth-exp-project
+
+# 2) Install deps
+npm install
+
+# 3) Run
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🔧 Environment Variables (to be configured)
 
-## Learn More
+- `DATABASE_URL` — Postgres connection string (Neon/Supabase)  
+- `NEXTAUTH_SECRET` — secret for Auth.js  
+- `NEXTAUTH_URL` — e.g., `http://localhost:3000`  
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🗂 Folder Structure (WIP)
+```
+/app
+  /api           → route handlers (auth, bookings, experiences)
+  /components    → UI components
+  /lib           → prisma client, utils
+  /styles        → global styles
+  /data          → seed/mock data
+/prisma          → schema.prisma & migrations
+/docs            → developer docs (Getting-Started, Deploying, Architecture, Contributing)
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🧭 Developer Docs
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Full Next.js boilerplate & tips: [/docs/Getting-Started.md](./docs/Getting-Started.md)  
+- (TODO) Deployment guide: `/docs/Deploying.md`  
+- (TODO) Architecture & data model: `/docs/Architecture.md`  
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 🔮 Roadmap
+
+- [x] Setup Next.js + Tailwind + Vercel  
+- [ ] Configure Prisma + initial schema  
+- [ ] Implement user auth (NextAuth + Prisma)  
+- [ ] Build core UI sections (Hero, Explorer, Destinations, Testimonials)  
+- [ ] CRUD for Experiences & Bookings  
+- [ ] Integrate external events API (normalize to DB)  
+- [ ] Responsive design pass  
+- [ ] Launch MVP 🎉  
+
+---
+
+## 🤝 Contributing
+
+Kallora is open source, but it’s mainly my personal learning + showcase project.  
+If you’d like to get involved:
+
+- Open an Issue to report bugs or suggest improvements.  
+- Propose design or architecture ideas (explain *why* they’d help).  
+- Small fixes (docs, typos, light refactors) are welcome.  
+
+Please read the full guidelines before contributing:  
+👉 [See CONTRIBUTING.md](./CONTRIBUTING.md)
+
+---
+
+## 📜 License
+This project is licensed under the **CC BY-NC 4.0 License** — see the [LICENSE](./LICENSE) file for details.

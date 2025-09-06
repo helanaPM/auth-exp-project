@@ -8,7 +8,9 @@ export const mockExperiences: Experience[] = [
     location: 'Kraków, Poland',
     imageUrl: 'https://picsum.photos/id/311/600/400',
     price: 45,
+    rating: 4.8,
     date: '2025-08-12',
+    category: 'Arts & Crafts',
   },
   {
     id: '2',
@@ -17,7 +19,9 @@ export const mockExperiences: Experience[] = [
     location: 'Podhale, Poland',
     imageUrl: 'https://picsum.photos/id/112/600/400',
     price: 30,
+    rating: 4.9,
     date: '2025-08-15',
+    category: 'Nature & Wildlife',
   },
   {
     id: '3',
@@ -26,7 +30,9 @@ export const mockExperiences: Experience[] = [
     location: 'Kraków, Poland',
     imageUrl: 'https://picsum.photos/id/454/600/400',
     price: 100,
+    rating: 5.0,
     date: '2025-08-18',
+    category: 'Photography',
   },
   // Add more mock experiences as needed
   {
@@ -36,7 +42,9 @@ export const mockExperiences: Experience[] = [
     location: 'Kerala, India',
     imageUrl: 'https://picsum.photos/id/175/600/400',
     price: 50,
+    rating: 4.7,
     date: '2025-09-01',
+    category: 'Culinary',
   },
   {    
     id: '5',
@@ -45,7 +53,9 @@ export const mockExperiences: Experience[] = [
     location: 'Himalayas, India',
     imageUrl: 'https://picsum.photos/id/678/600/400',
     price: 200,
+    rating: 4.9,
     date: '2025-09-10',
+    category: 'Wellness',
   },
   {
     id: '6',
@@ -54,6 +64,8 @@ export const mockExperiences: Experience[] = [
     location: 'Kerala, India',
     imageUrl: 'https://picsum.photos/id/987/600/400',
     price: 70,
+    rating: 4.8,
     date: '2025-09-15',
+    category: 'Nature & Wildlife',
   }
 ];
